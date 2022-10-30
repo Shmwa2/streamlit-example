@@ -15,7 +15,7 @@ forums](https://discuss.streamlit.io).
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
 
-streamlit.title('My Parents New Healty Diner')
+st.title('My Parents New Healty Diner')
 
 
 with st.echo(code_location='below'):
