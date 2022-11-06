@@ -49,14 +49,6 @@ with st.echo(code_location='below'):
         .mark_circle(color='#0068c9', opacity=0.5)
         .encode(x='x:Q', y='y:Q'))
     
-    st.header("Fruityvice フルーツアドバイス!")
-    fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon") 
-    st.text(fruityvice_response)
-
-    # 自分のコメントを書きます - 次の行は何をしますか? 
-    fruityvice_normalized = pandas.json_normalize(fruityvice_response.json()) 
-    # 自分のコメントを書く - これは何をするの? 
-    st.dataframe(fruityvice_normalized)
 
     my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
     my_cur = my_cnx.cursor()
