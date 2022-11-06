@@ -53,5 +53,9 @@ with st.echo(code_location='below'):
     fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon") 
     st.text(fruityvice_response)
 
-    
+    # 自分のコメントを書きます - 次の行は何をしますか? 
+    fruityvice_normalized = pandas.json_normalize(fruityvice_response.json()) 
+    # 自分のコメントを書く - これは何をするの? 
+    st.dataframe(fruityvice_normalized)
+
     
