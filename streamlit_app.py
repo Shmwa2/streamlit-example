@@ -5,6 +5,7 @@ import pandas as pd
 import streamlit as st
 import requests 
 
+
 """
 # Welcome to Streamlit!
 
@@ -48,6 +49,9 @@ with st.echo(code_location='below'):
         .mark_circle(color='#0068c9', opacity=0.5)
         .encode(x='x:Q', y='y:Q'))
     
+    st.header("Fruityvice フルーツアドバイス!")
     fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon") 
-    streamlit.text(fruityvice_response)
+    st.text(fruityvice_response)
 
+    
+    
